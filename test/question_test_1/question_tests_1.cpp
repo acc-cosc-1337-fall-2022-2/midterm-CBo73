@@ -2,11 +2,20 @@
 #include "catch.hpp"
 #include "question1.h"
 
-TEST_CASE("Verify Test Configuration", "verification") {
+TEST_CASE("Verify Test Configuration", "verification")
+{
 	REQUIRE(true == true);
 }
 
 TEST_CASE("test")
 {
 	REQUIRE(test_config() == true);
+}
+
+TEST_CASE("Test to see if get_fib_sequence function works")
+{
+	REQUIRE(get_fib_sequence(5) == 5);
+	REQUIRE(get_fib_sequence(7) == 13);
+	REQUIRE(get_fib_sequence(10) == 55);
+	REQUIRE(get_fib_sequence(12) == 144);
 }
